@@ -1,0 +1,6 @@
+framework module Pods_CirclePercent {
+  umbrella header "Pods-CirclePercent-umbrella.h"
+
+  export *
+  module * { export * }
+}
