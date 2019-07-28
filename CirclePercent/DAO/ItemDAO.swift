@@ -27,6 +27,8 @@ class ItemDAO {
     
     public func deleteByCode(id: Int){
         let item = self.findByCode(id: id);
-        realm.delete(item);
+        try! realm.write {
+            realm.delete(item);
+        }
     }
 }

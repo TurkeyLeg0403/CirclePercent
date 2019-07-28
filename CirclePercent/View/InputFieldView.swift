@@ -35,6 +35,8 @@ class InputFieldView: UIView {
         let iDAO = ItemDAO();
         let item = Item.init(name: nameField.text!, value: atof(valueField.text));
         iDAO.addItem(item: item, isUpdated: .all)
+        let vc = self.parentViewController() as! ViewController
+        vc.itemTable.reloadData()
     }
     
 }
